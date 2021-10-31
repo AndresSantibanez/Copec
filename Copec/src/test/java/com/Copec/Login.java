@@ -41,10 +41,12 @@ public class Login {
 			WebElement welcomeLogin = d.findElement(homeLocator);
 			welcomeLogin.click();
 			
+			//click opcion iniciar sesion
 			WebElement inSesion = d.findElement(loginLocator);
 			inSesion.click();
 			Thread.sleep(2000);
 			
+			//ingresar mail
 			WebElement m = d.findElement(mailLocator);
 			if(m.isDisplayed()) {
 				assertTrue(true, "elemento usuario encontrado....");
@@ -57,6 +59,7 @@ public class Login {
 				d.quit();
 			}
 			
+			//ingresar password
 			WebElement p = d.findElement(passLocator);
 			if(p.isDisplayed()) {
 				assertTrue(true, "elemento password encontrado....");
